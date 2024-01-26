@@ -1,11 +1,5 @@
-import { CgProfile } from 'react-icons/cg';
 import { AiOutlinePoweroff } from 'react-icons/ai';
 import { MdProductionQuantityLimits } from "react-icons/md";
-import { IoMdHelpCircleOutline } from "react-icons/io";
-import { IoLocationOutline } from "react-icons/io5";
-import { FcOnlineSupport } from "react-icons/fc";
-import { IoNotificationsOutline } from "react-icons/io5";
-import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineInventory2 } from "react-icons/md";
 import { AiOutlineDashboard } from "react-icons/ai";
 
