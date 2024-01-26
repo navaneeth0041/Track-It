@@ -6,9 +6,10 @@ import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 
 const form = () => {
   const [selectedCategory, setSelectedCategory] = useState("Category");
-  const categories = ["Category", "2", "3", "4", "5"];
+  const categories = ["Category", "2", "3", "4", "5","New Category"];
   const [selectedUnit, setSelectedUnit] = useState("Unit");
   const units = ["Pieces","Kilograms"];
+  
 
 
 

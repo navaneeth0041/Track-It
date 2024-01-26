@@ -68,8 +68,16 @@ const screen = () => {
                 <Cost total_value = {dashboardData.total_value} category_count = {dashboardData.category_count} total_items={dashboardData.item_count}/>
                 <Consumption low_stock={dashboardData.low_stock} out_of_stock = {dashboardData.out_of_stock}/>
               </div>
+              <div className="col-span-2 ">
+              <img
+                src="/Dash.gif"
+                alt="GIF"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
             </div>
+            
           </div>
         </div>
       </div>
