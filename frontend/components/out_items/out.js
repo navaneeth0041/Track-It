@@ -20,7 +20,7 @@ const out_pages = () => {
        console.error('Error:', error);
        return 'An error occurred'
       });
-    })
+    },  [])
 
   const getCurrentDate = () => {
     const currentDate = new Date();

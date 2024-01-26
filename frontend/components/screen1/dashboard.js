@@ -11,7 +11,7 @@ const screen = () => {
     category_count: 0,
     item_count: 0,
     low_stock: 0,
-    out_of_stock: 0
+    out_of_stock: 0 
   });
   useEffect(()=> {
     fetch('http://127.0.0.1:8000/api/get-stats', {
@@ -28,7 +28,7 @@ const screen = () => {
        console.error('Error:', error);
        return 'An error occurred'
       });
-  })
+  } ,  [])
  
 
   const getCurrentDate = () => {

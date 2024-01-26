@@ -59,7 +59,7 @@
        console.error('Error:', error);
        return 'An error occurred'
       });
-    })
+    },  [])
     const [searchText , setSearchText] = useState("")
 
 
