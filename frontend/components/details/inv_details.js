@@ -20,22 +20,22 @@ const inv_details= ({itemData})=>{
 
             <tbody>
               {itemData.map((item)=> (
-                <tr key={item.product_id} className="flex justify-between border-b border-gray-200 py-1w-full">
+                <tr key={item.product_id} className="flex justify-between border-b border-gray-200 py-2 w-full">
                   <td className="w-[30%] flex justify-start">{item.item_name}</td>
                   <td className="w-[30%] flex justify-start">{item.product_id}</td>
                   <td className="w-[30%] flex justify-start">{item.group}</td>
                   <td className="w-[30%] flex justify-start">{item.quantity}</td>
                   <td className="w-[30%] flex justify-start">
                   <div>
-                    <button className="bg-blue-500 text-white px-5 py-2 rounded-full text-sm">
-                    <FaUpload />
+                    <button className="bg-blue-200 text-blue-800 px-5 py-2 rounded-lg text-sm">
+                      <FaUpload />
                     </button>
                   </div> 
                   </td>
                   <td className="w-[30%] flex justify-start]">
                   <div>
-                    <button className="bg-red-500 text-white px-5 py-2 rounded-full text-sm">
-                    <FaDownload />
+                    <button className="bg-blue-200 text-white px-5 py-2 rounded-md text-sm">
+                      <FaDownload className="text-red-500" />
                     </button>
                   </div>
                 </td>
