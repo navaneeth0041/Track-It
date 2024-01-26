@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 /* eslint-disable @next/next/no-img-element */
-const cost = () => {
+const cost = ({low_stock , out_of_stock}) => {
   return (
     <div>
       <div className="w-full grid grid-cols-2 lg:mt-8 xl:mt-4 2xl:mt-8 gap-x-4">
@@ -12,7 +12,7 @@ const cost = () => {
           </div>
           
           <div className="flex justify-center items-center h-[10%] py-5">
-          <p className="text-lg font-bold text- black-200">258</p>
+          <p className="text-lg font-bold text- black-200">{low_stock}</p>
           </div>
 
 
@@ -35,7 +35,7 @@ const cost = () => {
           </div>
           
           <div className="flex justify-center items-center h-[10%] py-5">
-          <p className="text-lg font-bold text- black-200">258</p>
+          <p className="text-lg font-bold text- black-200">{out_of_stock}</p>
           </div>
 
 

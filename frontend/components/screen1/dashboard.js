@@ -1,13 +1,36 @@
 import { BiHomeAlt } from 'react-icons/bi';
 import { BsCalendar2Date } from 'react-icons/bs';
 import Cost from '../dash_cards/cost_card';
-import Stock from '../dash_cards/dash_card';
 import Consumption from '../consumption/index';
-import Category from '../category/index';
-import Carousel from '../carousel/index';
-import Tickets from '../tickets/index';
+import { useState, useEffect } from 'react';
+
 import { AiOutlineDashboard } from "react-icons/ai";
 const screen = () => {
+  const [dashboardData, setDashboardData] = useState({
+    total_value: 0,
+    category_count: 0,
+    item_count: 0,
+    low_stock: 0,
+    out_of_stock: 0
+  });
+  useEffect(()=> {
+    fetch('http://127.0.0.1:8000/api/get-stats', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+       setDashboardData(data)
+      })
+      .catch((error) => {
+       console.error('Error:', error);
+       return 'An error occurred'
+      });
+  })
+ 
+
   const getCurrentDate = () => {
     const currentDate = new Date();
     return currentDate.toLocaleDateString('en-US');
@@ -42,18 +65,9 @@ const screen = () => {
           <div className="w-full pl-3">
             <div className="grid grid-cols-7">
               <div className="col-span-5 pr-3">
-              <Cost/>
-                <Consumption />
+                <Cost total_value = {dashboardData.total_value} category_count = {dashboardData.category_count} total_items={dashboardData.item_count}/>
+                <Consumption low_stock={dashboardData.low_stock} out_of_stock = {dashboardData.out_of_stock}/>
               </div>
-
-              {/* <div className="col-span-2 pb-5">
-                <Category />
-              </div>
-
-              <div className="col-span-5 pr-20 pl-3">
-                <Carousel />
-                <Tickets />
-              </div> */}
             </div>
           </div>
         </div>
