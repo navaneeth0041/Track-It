@@ -8,7 +8,12 @@ import Carousel from '../carousel/index';
 import Tickets from '../tickets/index';
 import { AiOutlineDashboard } from "react-icons/ai";
 const screen = () => {
+  const getCurrentDate = () => {
+    const currentDate = new Date();
+    return currentDate.toLocaleDateString('en-US');
+  };
   return (
+
     <section>
       <div>
         <div className="bg-blue-50 rounded-lg py-3">
@@ -28,7 +33,7 @@ const screen = () => {
                 </div>
                 <div>
                   {' '}
-                  <p>02/02/2023</p>
+                  <p>{getCurrentDate()}</p>
                 </div>
               </div>
             </div>

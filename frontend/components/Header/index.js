@@ -23,7 +23,7 @@ const index = () => {
             <p>Amfoss</p>
           </div>
 
-          <div className="bg-gradient-to-t from-blue-500 to to-blue-50 rounded-full p-3 text-xl text-white">
+          {/* <div className="bg-gradient-to-t from-blue-500 to to-blue-50 rounded-full p-3 text-xl text-white">
             <BsPerson />
           </div>
           <div className="bg-gradient-to-t from-blue-500 to to-blue-50 rounded-full p-3 text-xl text-white">
@@ -37,7 +37,7 @@ const index = () => {
           </div>
           <div className="bg-gradient-to-t from-red-500 to to-red-50 rounded-full p-3 text-xl text-white">
             <IoMdNotificationsOutline />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

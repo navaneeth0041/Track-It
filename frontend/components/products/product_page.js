@@ -5,6 +5,10 @@ import Category from '../category/index';
 import { MdInventory } from "react-icons/md";
 
 const index = () => {
+  const getCurrentDate = () => {
+    const currentDate = new Date();
+    return currentDate.toLocaleDateString('en-US');
+  };
   return (
     <section>
       <div>
@@ -25,7 +29,7 @@ const index = () => {
                 </div>
                 <div>
                   {' '}
-                  <p>02/02/2023</p>
+                  <p>{getCurrentDate()}</p>
                 </div>
               </div>
             </div>

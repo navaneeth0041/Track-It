@@ -3,6 +3,10 @@ import { MdInventory } from "react-icons/md";
 import Details from "../details/inv_details";
 
 const inventory_pages = () => {
+  const getCurrentDate = () => {
+    const currentDate = new Date();
+    return currentDate.toLocaleDateString('en-US');
+  };
   return (
     <section>
       <div>
@@ -23,7 +27,7 @@ const inventory_pages = () => {
                 </div>
                 <div>
                   {' '}
-                  <p>02/02/2023</p>
+                  <p>{getCurrentDate()}</p>
                 </div>
               </div>
             </div>

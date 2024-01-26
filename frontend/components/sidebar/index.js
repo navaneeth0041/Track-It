@@ -20,7 +20,7 @@ import Link from 'next/link'
 const index = () => {
   return (
     <section>
-      <div className="w-full h-full">
+      <div className="w-full">
         <div className="w-[60%] bg-blue-50 flex flex-col items-center rounded-xl gap-y-12 py-3">
           <Link href="/DashBoard">
           <div className="text-xl text-blue-600 hover:scale-150 ">
@@ -37,39 +37,10 @@ const index = () => {
           <MdProductionQuantityLimits />
           </div>
           </Link>
-          {/* <div className="text-xl text-blue-600 hover:scale-150">
-          <IoSettingsOutline />
-          </div>
-          <div className="text-xl text-blue-600 hover:scale-150">
-          <IoNotificationsOutline />
-          </div>
-          <div className="text-xl text-blue-600 hover:scale-150">
-          <IoLocationOutline />
-          </div>
-          <div className="text-xl text-blue-600 hover:scale-150">
-          
-          <FcOnlineSupport />
-          </div>
-          <div className="text-xl text-blue-600 hover:scale-150">
-          <IoMdHelpCircleOutline />
-          </div>
-          <div className="text-xl text-blue-600 hover:scale-150">
-          <CgProfile />
-          </div> */}
-          {/* <div className="text-xl text-blue-600 hover:scale-150 mt-10">
-            <AiOutlinePoweroff />
-          </div> */}
-        </div>
-        <div style={{ height: '200px' }}></div>
-
-        <div className="w-[60%] bg-blue-50 flex flex-col items-center rounded-xl gap-y-12 py-2">
-          <div className="text-xl text-blue-600 hover:scale-150 mt-3">
+          <div style={{ height: '356px' }}></div>
+          <div className="text-xl text-blue-600 hover:scale-150 mt-10">
             <AiOutlinePoweroff />
           </div>
-          <div className="text-xl text-blue-600 hover:scale-150 mt-3">
-            <AiOutlinePoweroff />
-          </div>
-
         </div>
       </div>
     </section>
