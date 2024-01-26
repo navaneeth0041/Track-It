@@ -2,6 +2,7 @@ import { AiOutlinePoweroff } from 'react-icons/ai';
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { MdOutlineInventory2 } from "react-icons/md";
 import { AiOutlineDashboard } from "react-icons/ai";
+import { RiAddLine } from "react-icons/ri";
 
 
 
@@ -29,6 +30,11 @@ const index = () => {
           <Link href="/products">
           <div className="text-xl text-blue-600 hover:scale-150">
           <MdProductionQuantityLimits />
+          </div>
+          </Link>
+          <Link href="/add_product">
+          <div className="text-xl text-blue-600 hover:scale-150 ">
+          <RiAddLine />
           </div>
           </Link>
           <div style={{ height: '356px' }}></div>
