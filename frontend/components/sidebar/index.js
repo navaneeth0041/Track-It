@@ -21,7 +21,7 @@ const index = () => {
   return (
     <section>
       <div className="w-full">
-        <div className="w-[60%] bg-blue-50 flex flex-col items-center rounded-xl gap-y-12 py-3">
+        <div className="w-[60%] h-[700px] bg-blue-50 flex flex-col items-center rounded-xl gap-y-12 py-3">
           <Link href="/DashBoard">
           <div className="text-xl text-blue-600 hover:scale-150 ">
           <AiOutlineDashboard />
