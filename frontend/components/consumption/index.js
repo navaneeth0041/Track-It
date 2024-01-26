@@ -8,7 +8,7 @@ const cost = () => {
       <Link href="/low_stock">
       <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg">
         <div className="flex justify-center items-center h-[10%] py-5">
-          <p className="text-lg font-bold text-orange-500">Low Stock</p>
+          <p className="text-xl font-bold text-orange-500">Low Stock</p>
           </div>
           
           <div className="flex justify-center items-center h-[10%] py-5">
@@ -18,7 +18,7 @@ const cost = () => {
 
 
           <div className="h-[90%] flex  items-center justify-between  gap-y-10 ">
-            <div className="h-[15%]">
+            <div className="h-[20%]">
               <img alt="icon" className="h-full" src="/arrow.png"></img>
             </div>
             <div className="h-[10%]">
@@ -28,18 +28,28 @@ const cost = () => {
         </div>
         </Link>
 
-        <div className="bg-white shadow-md px-4 py-2 lg:h-40 xl:h-40 rounded-lg">
-          <div className="flex justify-center items-center h-[10%] text-red-800 py-7">
-  <p className="text-lg font-bold">Out Of Stock</p>
-            </div>
-
-            <div className="h-[90%] flex items-center justify-left">
-              <div className="h-[30%]">
-                <img alt="icon" src="/out-of-stock.png" className="h-full"></img>
-              </div>
-
-            </div>
+        <Link href="/low_stock">
+      <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg">
+        <div className="flex justify-center items-center h-[10%] py-5">
+          <p className="text-xl font-bold text-red-500">Out of Stock</p>
           </div>
+          
+          <div className="flex justify-center items-center h-[10%] py-5">
+          <p className="text-lg font-bold text- black-200">258</p>
+          </div>
+
+
+
+          <div className="h-[90%] flex  items-center justify-between  gap-y-10 ">
+            <div className="h-[20%]">
+              <img alt="icon" className="h-full" src="/out-of-stock.png"></img>
+            </div>
+            <div className="h-[10%]">
+                <img alt="icon" src="/external-link.png" className="h-full"></img>
+              </div>
+          </div>
+        </div>
+        </Link>
           
       </div>
     </div>

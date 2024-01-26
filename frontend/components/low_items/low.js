@@ -1,10 +1,43 @@
-import { MdProductionQuantityLimits } from "react-icons/md";
 import { BsCalendar2Date } from 'react-icons/bs';
-import URL from '../url/index';
-import Category from '../category/index';
-import { MdInventory } from "react-icons/md";
+import Low_Detail from "../low_items/low_stock_details";
+import { VscFoldDown } from "react-icons/vsc";
 
-const index = () => {
+const itemData = [
+  {
+    "item_name": "Widget A",
+    "product_id": "P001",
+    "quantity": 100,
+    "unit": ["piece"],
+    "group": "Electronics",
+    "cost": 25.99
+  },
+  {
+    "item_name": "Gizmo B",
+    "product_id": "P002",
+    "quantity": 50,
+    "unit": ["piece"],
+    "group": "Gadgets",
+    "cost": 12.49
+  },
+  {
+    "item_name": "Tool C",
+    "product_id": "P003",
+    "quantity": 30,
+    "unit": ["piece"],
+    "group": "Tools",
+    "cost": 8.75
+  },
+  {
+    "item_name": "Raw Material X",
+    "product_id": "P004",
+    "quantity": 500,
+    "unit": ["kg"],
+    "group": "Materials",
+    "cost": 2.5
+  }
+];
+
+const inventory_pages = () => {
   const getCurrentDate = () => {
     const currentDate = new Date();
     return currentDate.toLocaleDateString('en-US');
@@ -12,15 +45,15 @@ const index = () => {
   return (
     <section>
       <div>
-        <div className="bg-blue-50 rounded-lg py-3">
+        <div className="bg-blue-50 rounded-lg py-3 h-[700px] overflow-y-auto">
           <div className="pl-3 mb-10 pr-20">
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
-                <div>
-                <MdProductionQuantityLimits />
+                <div className='text-orange-500'>
+                <VscFoldDown />
                 </div>
-                <div>
-                  <p>Products</p>
+                <div className='text-orange-500'>
+                  <p>Low Stocks</p>
                 </div>
               </div>
               <div className="flex items-center gap-x-5">
@@ -35,14 +68,10 @@ const index = () => {
             </div>
           </div>
 
-          <div className="w-full pl-3">
-            <div className="grid grid-cols-12">
-              <div className="col-span-10 pr-3 h-[80%]" >
-                <URL />
-              </div>
-
-              <div className="col-span-2 pb-7 pr-3">
-                <Category />
+          <div className="w-full pl-3 pr-3">
+            <div className='grid grid-cols-12'>
+              <div className='col-span-12 pr-3'>
+                <Low_Detail itemData={itemData}/>
               </div>
             </div>
           </div>
@@ -52,4 +81,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default inventory_pages;
