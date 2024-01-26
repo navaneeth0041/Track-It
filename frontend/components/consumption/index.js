@@ -28,7 +28,7 @@ const cost = ({low_stock , out_of_stock}) => {
         </div>
         </Link>
 
-        <Link href="/low_stock">
+        <Link href="/out_stock">
       <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg">
         <div className="flex justify-center items-center h-[10%] py-5">
           <p className="text-xl font-bold text-red-500">Out of Stock</p>

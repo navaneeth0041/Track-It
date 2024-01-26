@@ -68,6 +68,7 @@ const screen = () => {
                 <Cost total_value = {dashboardData.total_value} category_count = {dashboardData.category_count} total_items={dashboardData.item_count}/>
                 <Consumption low_stock={dashboardData.low_stock} out_of_stock = {dashboardData.out_of_stock}/>
               </div>
+
             </div>
           </div>
         </div>

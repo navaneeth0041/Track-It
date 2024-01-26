@@ -1,6 +1,6 @@
 
 import { FaUpload,FaDownload } from "react-icons/fa";
-const low_details= ({itemData})=>{
+const out_details= ({itemData})=>{
 
     return(
         <div>
@@ -35,4 +35,4 @@ const low_details= ({itemData})=>{
     );
 
 }
-export default low_details;
+export default out_details;
