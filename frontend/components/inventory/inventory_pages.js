@@ -2,45 +2,6 @@
   import { MdInventory } from "react-icons/md";
   import Details from "../details/inv_details";
   import React, { useState, useEffect } from 'react';
-
-  
-
-
-    // const itemData = [
-    //   {
-    //     "item_name": "Widget A",
-    //     "product_id": "P001",
-    //     "quantity": 100,
-    //     "unit": ["piece"],
-    //     "group": "Electronics",
-    //     "cost": 25.99
-    //   },
-    //   {
-    //     "item_name": "Gizmo B",
-    //     "product_id": "P002",
-    //     "quantity": 50,
-    //     "unit": ["piece"],
-    //     "group": "Gadgets",
-    //     "cost": 12.49
-    //   },
-    //   {
-    //     "item_name": "Tool C",
-    //     "product_id": "P003",
-    //     "quantity": 30,
-    //     "unit": ["piece"],
-    //     "group": "Tools",
-    //     "cost": 8.75
-    //   },
-    //   {
-    //     "item_name": "Raw Material X",
-    //     "product_id": "P004",
-    //     "quantity": 500,
-    //     "unit": ["kg"],
-    //     "group": "Materials",
-    //     "cost": 2.5
-    //   }
-    // ];
-
   
   const inventory_pages = () => {
     const [itemData , setItemData] = useState([])
@@ -62,12 +23,11 @@
     },  [])
     const [searchText , setSearchText] = useState("")
 
+      const filteredItems = searchText ? itemData.filter(item => 
+        item.item_name.toLowerCase().includes(searchText.toLowerCase())
+      ):itemData;
 
-    const filteredItems = searchText ? itemData.filter(item => {
-      item.item_name.toLowerCase().includes(searchText.toLowerCase())
-    }):itemData;
 
-    console.log(filteredItems)  
     const getCurrentDate = () => {
       const currentDate = new Date();
       return currentDate.toLocaleDateString('en-US');
@@ -100,13 +60,13 @@
 
             <div className="w-full pl-3 pr-3">
               <div className='grid grid-cols-12'>
-                <div className='col-span-12 pr-3'>
+                <div className='col-span-12 pr-3 '>
                 <input
                   type="text"
                   placeholder="Search items..."
                   value={searchText}
                   onChange={(e) => setSearchText(e.target.value)}
-                  className="bg-gray-100 border border-gray-300 p-2 rounded-md mb-3"
+                  className="w-[500px] p-2 mb-3 bg-blue-100 border border-gray-300 p-2 focus:outline-none rounded-md mb-3"
                 />
                   <Details itemData={filteredItems}/>
                 </div>

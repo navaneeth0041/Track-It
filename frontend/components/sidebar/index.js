@@ -4,11 +4,6 @@ import { MdOutlineInventory2 } from "react-icons/md";
 import { AiOutlineDashboard } from "react-icons/ai";
 
 
-
-
-
-
-
 import Link from 'next/link'
 
 const index = () => {
