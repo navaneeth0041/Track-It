@@ -10,7 +10,7 @@ const index = () => {
         </div> */}
 
         <div className="h-[70%] flex items-center justify-center">
-          <img className="h-full" src="/tick.png"></img>
+          {/* <img className="h-full w-full" src="/hacking2.png"></img> */}
         </div>
 
         {/* <div className="flex justify-center my-1">

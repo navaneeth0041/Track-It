@@ -40,20 +40,20 @@ const screen = () => {
           </div>
 
           <div className="w-full pl-3">
-            <div className="grid grid-cols-7">
-              <div className="col-span-5 pr-3">
+            <div className="grid grid-cols-10">
+              <div className="col-span-7 pr-3">
               <Cost/>
                 <Consumption />
               </div>
 
               {/* <div className="col-span-2 pb-5">
                 <Category />
-              </div>
-
-              <div className="col-span-5 pr-20 pl-3">
-                <Carousel />
-                <Tickets />
               </div> */}
+
+              <div className="col-span-3 pr-20 pl-3">
+              <Tickets />
+                <Tickets />
+              </div>
             </div>
           </div>
         </div>
