@@ -16,7 +16,7 @@ const screen = () => {
 
     <section>
       <div>
-        <div className="bg-blue-50 rounded-lg py-3">
+        <div className="bg-blue-50 rounded-lg py-5 h-[700px]">
           <div className="pl-3 mb-10 pr-20">
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
@@ -40,11 +40,10 @@ const screen = () => {
           </div>
 
           <div className="w-full pl-3">
-            <div className="grid grid-cols-12">
+            <div className="grid grid-cols-7">
               <div className="col-span-5 pr-3">
               <Cost/>
                 <Consumption />
-                <Stock/>
               </div>
 
               {/* <div className="col-span-2 pb-5">
