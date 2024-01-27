@@ -117,15 +117,15 @@ const handleDeductSubmit = (id , qty) => {
                         modal nested>
                         {
                             close => (
-                                <div class='modal'className=" w-full text-black bg-gray-300 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" >
-                                    <div className='content' >
-                                        Add Stock to item {item.product_name}
+                                <div className=" w-[400px] text-black bg-gray-300 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" >
+                                    <div className='content p-2 py-4' >
+                                    Add Stock to {item.item_name} ({item.product_id}):
                                     </div>
                                     <input 
                                       type="text" value={value} onChange={handleInputChange} 
                                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"/>
-                                      <div>
-                                        <button className=" w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" 
+                                      <div className="p-3">
+                                        <button className=" w-[150px] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" 
                                         onClick=
                                             {() => {handleAddSubmit(item.product_id , value); close(); setValue('')}}>
                                                 Submit
@@ -146,15 +146,15 @@ const handleDeductSubmit = (id , qty) => {
                           modal nested>
                           {
                               close => (
-                                  <div class='modal' className="w-full text-black bg-gray-300 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                                      <div class='content' >
-                                          Deduct Stock to item {item.product_id}
+                                  <div class='modal' className="w-[400px] text-black bg-gray-300 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                      <div class='content p-2 py-4' >
+                                          Deduct Stock from {item.item_name} ({item.product_id}) :
                                       </div>
                                       <input 
                                         type="text" value={value} onChange={handleInputChange} 
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"/>
-                                        <div>
-                                          <button className=" w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                        <div className="p-3">
+                                          <button className=" w-[150px] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                           onClick=
                                               {() => {handleDeductSubmit(item.product_id , value);close(); setValue('')}}>
                                                   Submit
@@ -179,20 +179,3 @@ const handleDeductSubmit = (id , qty) => {
 
 }
 export default inv_details;
-
-
-{/* <Modal isVisible={showModaldown} onClose={()=> setShowModaldown(false)}>
-                      <div className="p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-5">
-                          Modal Title
-                          </h3>
-                          <form class='space-y-6'action="#">
-                              <div>
-                                <label className="block mb-2 text-sm font-medium text-gray-900">
-                                  Enter stock subtracted
-                                </label>
-                                </div>
-                              
-                          </form>
-                      </div>
-                      </Modal> */}
