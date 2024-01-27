@@ -6,7 +6,7 @@ const cost = ({low_stock , out_of_stock}) => {
     <div>
       <div className="w-full grid grid-cols-2 lg:mt-8 xl:mt-4 2xl:mt-8 gap-x-4">
       <Link href="/low_stock">
-      <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg">
+      <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg hover:scale-110 ">
         <div className="flex justify-center items-center h-[10%] py-5">
           <p className="text-xl font-bold text-orange-500">Low Stock</p>
           </div>
@@ -29,7 +29,7 @@ const cost = ({low_stock , out_of_stock}) => {
         </Link>
 
         <Link href="/out_stock">
-      <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg">
+      <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg hover:scale-110">
         <div className="flex justify-center items-center h-[10%] py-5">
           <p className="text-xl font-bold text-red-500">Out of Stock</p>
           </div>
