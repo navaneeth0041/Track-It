@@ -3,13 +3,13 @@ const cost = ({total_value , category_count, total_items}) => {
   return (
     <div>
       <div className="w-full grid grid-cols-3 lg:mt-10 xl:mt-10 2xl:mt-10 gap-x-4">
-      <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg">
+      <div className="bg-white shadow-md px-4 py-2 lg:h-64 xl:h-48 rounded-lg ">
         <div className="flex justify-center items-center h-[10%] py-5">
           <p className="text-xl font-bold text-Black-500">Total Cost</p>
           </div>
           
           <div className="flex justify-center items-center h-[10%] py-5">
-          <p className="text-lg font-bold text- black-200">{total_value}</p>
+          <p className="text-lg font-bold text- black-200"> ₹ {total_value}</p>
           </div>
 
 
@@ -36,9 +36,7 @@ const cost = ({total_value , category_count, total_items}) => {
             <div className="h-[15%]">
               <img alt="icon" className="h-full" src="/categories.png"></img>
             </div>
-            <div className="h-[10%]">
-                <img alt="icon" src="/external-link.png" className="h-full"></img>
-              </div>
+
           </div>
         </div>
 

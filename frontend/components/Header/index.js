@@ -15,7 +15,7 @@ const index = () => {
           <SiHiveBlockchain />
           </div>
           <div>
-            <p className="font-bold text-2xl">Track It</p>
+            <p className="font-bold text-2xl">T R A C K I T</p>
           </div>
         </div>
         <div className="flex gap-x-2 ">

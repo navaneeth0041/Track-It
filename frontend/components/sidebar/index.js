@@ -22,11 +22,11 @@ const index = () => {
           <MdOutlineInventory2 />
           </div>
           </Link>
-          <Link href="/products">
+          {/* <Link href="/products">
           <div className="text-xl text-blue-600 hover:scale-150">
           <MdProductionQuantityLimits />
           </div>
-          </Link>
+          </Link> */}
           <Link href="/add_product">
           <div className="text-xl text-blue-600 hover:scale-150 ">
           <RiAddLine />
