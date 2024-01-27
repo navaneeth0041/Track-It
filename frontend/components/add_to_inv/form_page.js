@@ -1,14 +1,35 @@
 import { BiCategoryAlt, BiCollection } from "react-icons/bi";
 import { MdOutlineConfirmationNumber } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 
-
 const form = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Category");
-  const categories = ["Category", "2", "3", "4", "5"];
-  const [selectedUnit, setSelectedUnit] = useState("Unit");
-  const units = ["Pieces","Kilograms"];
+  const [selectedUnit, setSelectedUnit] = useState("piece");
+  const units = ["piece","kg"];
+
+  const [selectedCategory, setSelectedCategory] = useState("Other..");
+  const [categories,setCategories] = useState([])
+
+  useEffect(()=> { 
+    fetch('http://127.0.0.1:8000/api/get-categories', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },  
+    })
+      .then((response) => response.json())
+      .then((data) => {
+       setCategories(data)
+      })
+      .catch((error) => {
+       console.error('Error:', error);
+       return 'An error occurred'
+      });
+  },[])
+  const [productName , setProductName] = useState("");
+  const [productId , setProductId] = useState("");
+  const [quantity , setQuantity] = useState("");
+  const [price , setPrice] = useState("");
 
 
 
@@ -19,7 +40,46 @@ const form = () => {
   const handleUnitChange = (e) => {
     setSelectedUnit(e.target.value);
   };
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    if(productName == "" || productId == "" || quantity =="" || price == ""){
+      console.log("error")
+      
+    }else {
+      const requestData = {
+        "product_id": productId,
+        "item_name": productName,
+        "quantity": parseInt(quantity),
+        "unit": selectedUnit,
+        "group": selectedCategory,
+        "cost": parseFloat(price),
+      };
+  
+  
+      fetch('http://127.0.0.1:8000/api/add-item/', {  
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body:JSON.stringify(requestData)
+      })
+        .then((response) => response.json())
+        .then((data) => {
+            setProductName("")
+            setProductId("")
+            setQuantity("")
+            setPrice("")
+            setSelectedCategory("Others..")
+            setSelectedUnit("piece")
+          window.location.reload();
+          NotificationManager.success('Success message', 'Title here');
+        })
+        .catch((error) => {
+         console.error('Error:', error);
+         return 'An error occurred'
+        });
+    }
+      
+  };
 
   return (
     <div>
@@ -31,6 +91,7 @@ const form = () => {
               type="Product"
               name="Product"
               placeholder="Product"
+              onChange={(e) => setProductName(e.target.value)}
               className="bg-blue-100 outline-none text-sm flex-1 "
             ></input>
           </div>
@@ -39,6 +100,7 @@ const form = () => {
             <input
               type="Product"
               name="Product"
+              onChange={(e) => setProductId(e.target.value)}
               placeholder="Product Id"
               className="bg-blue-100 outline-none text-sm flex-1 "
             ></input>
@@ -48,6 +110,7 @@ const form = () => {
             <input
               type="Product"
               name="Product"
+              onChange={(e) => setQuantity(e.target.value)}
               placeholder="Quantity"
               className="bg-blue-100 outline-none text-sm flex-1 "
             ></input>
@@ -76,9 +139,9 @@ const form = () => {
               className="bg-blue-100 outline-none text-sm flex-1 cursor-pointer"
             >
               {categories.map((category) => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
+                 <option key={category} value={category}>
+                 {category}
+               </option>
               ))}
             </select>
           </div>
@@ -88,6 +151,7 @@ const form = () => {
               type="Value"
               name="Unit Price"
               placeholder="Unit Price"
+              onChange={(e) => setPrice(e.target.value)}
               className="bg-blue-100 outline-none text-sm flex-1 "
             ></input>
           </div>
@@ -95,8 +159,7 @@ const form = () => {
             <button
               onClick={handleSubmit}
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline block mx-auto"
-            >
-              Add Product
+            >Add Product
             </button>
           </div>
 
