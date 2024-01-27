@@ -5,6 +5,7 @@
   
   const inventory_pages = () => {
     const [itemData , setItemData] = useState([])
+    
     useEffect(()=> {
       fetch('http://127.0.0.1:8000/api/get-items', {
       method: 'GET',
@@ -17,7 +18,7 @@
        setItemData(data)
       })
       .catch((error) => {
-       console.error('Error:', error);
+       console.error('Error:', error); 
        return 'An error occurred'
       });
     },  [])
