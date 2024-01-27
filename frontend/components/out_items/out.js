@@ -21,6 +21,11 @@ const out_pages = () => {
        return 'An error occurred'
       });
     },  [])
+    const [searchText , setSearchText] = useState("")
+
+    const filteredItems = searchText ? itemData.filter(item => 
+      item.item_name.toLowerCase().includes(searchText.toLowerCase())
+    ):itemData;
 
   const getCurrentDate = () => {
     const currentDate = new Date();
@@ -55,6 +60,13 @@ const out_pages = () => {
           <div className="w-full pl-3 pr-3">
             <div className='grid grid-cols-12'>
               <div className='col-span-12 pr-3'>
+              <input
+                  type="text"
+                  placeholder="Search items..."
+                  value={searchText}
+                  onChange={(e) => setSearchText(e.target.value)}
+                  className="w-[500px] p-2 mb-3 bg-blue-100 border border-gray-300 p-2 focus:outline-none rounded-md mb-3"
+                />
                 <Out_Detail itemData={itemData}/>
               </div>
             </div>

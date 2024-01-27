@@ -17,7 +17,7 @@
        setItemData(data)
       })
       .catch((error) => {
-       console.error('Error:', error);
+       console.error('Error:', error); 
        return 'An error occurred'
       });
     },  [])
