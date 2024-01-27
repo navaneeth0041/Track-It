@@ -23,11 +23,9 @@
       });
     },  [])
     const [searchText , setSearchText] = useState("")
-
     const filteredItems = searchText ? itemData.filter(item => 
       item.item_name.toLowerCase().includes(searchText.toLowerCase())
     ):itemData;
-
 
     const getCurrentDate = () => {
       const currentDate = new Date();

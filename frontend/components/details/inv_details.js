@@ -11,24 +11,9 @@ const inv_details= ({itemData})=>{
     const numericValue = e.target.value.replace(/[^0-9]/g,'');
     setValue(numericValue);
 }
-const [itemDatas , setItemDatas] = useState(itemData)
-    useEffect(()=> {
-      fetch('http://127.0.0.1:8000/api/get-items', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-       setItemDatas(data)
-      })
-      .catch((error) => {
-       console.error('Error:', error);
-       return 'An error occurred'
-      });
-    },  [])
-
+    const [itemDatas , setItemDatas] = useState(itemData)
+    useEffect(() => { setItemDatas(itemData)}, [itemData] )
+    
 const handleAddSubmit = (id , qty) => {
   const requestData = {
     "product_id": id,
@@ -59,7 +44,6 @@ const handleAddSubmit = (id , qty) => {
          console.error('Error:', error);
          return 'An error occurred'
         });
-      // window.location.reload();
     })
     .catch((error) => {
      console.error('Error:', error);
@@ -96,7 +80,6 @@ const handleDeductSubmit = (id , qty) => {
          console.error('Error:', error);
          return 'An error occurred'
         });
-      // window.location.reload();
     })
     .catch((error) => {
      console.error('Error:', error);
