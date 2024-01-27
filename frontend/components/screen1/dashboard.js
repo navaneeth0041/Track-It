@@ -3,6 +3,7 @@ import { BsCalendar2Date } from 'react-icons/bs';
 import Cost from '../dash_cards/cost_card';
 import Consumption from '../consumption/index';
 import { useState, useEffect } from 'react';
+import Clock from 'react-live-clock';
 
 import { AiOutlineDashboard } from "react-icons/ai";
 const screen = () => {
@@ -33,8 +34,9 @@ const screen = () => {
 
   const getCurrentDate = () => {
     const currentDate = new Date();
-    return currentDate.toLocaleDateString('en-US');
+    return currentDate.toLocaleDateString('en-us');
   };
+  
   return (
 
     <section>
@@ -51,13 +53,17 @@ const screen = () => {
                 </div>
               </div>
               <div className="flex items-center gap-x-5">
-                <div>
-                  <BsCalendar2Date />
-                </div>
-                <div>
+              <div>
                   {' '}
                   <p>{getCurrentDate()}</p>
                 </div>
+              <div> 
+      <Clock 
+          format={'h:mm:ssa'} 
+          style={{fontSize: '1em'}} 
+          ticking={true} /> 
+    </div>
+
               </div>
             </div>
           </div>
