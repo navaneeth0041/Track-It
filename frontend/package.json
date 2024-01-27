@@ -17,7 +17,11 @@
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "react-icons": "^4.12.0",
+<<<<<<< HEAD
     "react-notifications": "^1.7.4"
+=======
+    "react-simple-alert": "^0.0.2"
+>>>>>>> 943c9e001f3ab1ad170c8e483c951d21101ddf95
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
