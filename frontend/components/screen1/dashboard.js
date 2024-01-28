@@ -60,7 +60,6 @@ const screen = () => {
                   <p>{getCurrentDate()}</p>
                 </div>
               <div> 
-
               <view>
                   <time><Clock 
                   format={'h:mm:ss a'} 

@@ -7,8 +7,12 @@ import Form from '../add_to_inv/form_page';
 const index = () => {
   const getCurrentDate = () => {
     const currentDate = new Date();
-    return currentDate.toLocaleDateString('en-US');
-  };
+    const day = currentDate.getDate().toString().padStart(2, '0');
+    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+    const year = currentDate.getFullYear();
+    const formattedDate = `${day}/${month}/${year}`;
+    return formattedDate;
+    };
   return (
     <section>
       <div>
@@ -24,9 +28,6 @@ const index = () => {
                 </div>
               </div>
               <div className="flex items-center gap-x-5">
-                <div>
-                  <BsCalendar2Date />
-                </div>
                 <div>
                   {' '}
                   <p>{getCurrentDate()}</p>

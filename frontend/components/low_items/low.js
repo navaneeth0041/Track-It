@@ -29,10 +29,14 @@ const inventory_pages = () => {
       item.item_name.toLowerCase().includes(searchText.toLowerCase())
     ):itemData;
 
-  const getCurrentDate = () => {
-    const currentDate = new Date();
-    return currentDate.toLocaleDateString('en-US');
-  };
+    const getCurrentDate = () => {
+      const currentDate = new Date();
+      const day = currentDate.getDate().toString().padStart(2, '0');
+      const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+      const year = currentDate.getFullYear();
+      const formattedDate = `${day}/${month}/${year}`;
+      return formattedDate;
+      };
   return (
     <section>
       <div>
@@ -48,9 +52,6 @@ const inventory_pages = () => {
                 </div>
               </div>
               <div className="flex items-center gap-x-5">
-                <div>
-                  <BsCalendar2Date />
-                </div>
                 <div>
                   {' '}
                   <p>{getCurrentDate()}</p>
