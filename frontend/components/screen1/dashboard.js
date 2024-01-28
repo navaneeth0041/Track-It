@@ -1,5 +1,3 @@
-import { BiHomeAlt } from 'react-icons/bi';
-import { BsCalendar2Date } from 'react-icons/bs';
 import Cost from '../dash_cards/cost_card';
 import Consumption from '../consumption/index';
 import { useState, useEffect } from 'react';
@@ -34,8 +32,12 @@ const screen = () => {
 
   const getCurrentDate = () => {
     const currentDate = new Date();
-    return currentDate.toLocaleDateString('en-us');
-  };
+    const day = currentDate.getDate().toString().padStart(2, '0');
+    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+    const year = currentDate.getFullYear();
+    const formattedDate = `${day}/${month}/${year}`;
+    return formattedDate;
+    };
   
   return (
 
@@ -46,7 +48,7 @@ const screen = () => {
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
                 <div>
-                <AiOutlineDashboard />
+                  <AiOutlineDashboard />
                 </div>
                 <div>
                   <p>DashBoard</p>
@@ -57,12 +59,12 @@ const screen = () => {
                   {' '}
                   <p>{getCurrentDate()}</p>
                 </div>
-              <div> 
-      <Clock 
-          format={'h:mm:ssa'} 
-          style={{fontSize: '1em'}} 
-          ticking={true} /> 
-    </div>
+              {/* <div> 
+                <Clock 
+                    format={'h:mm:ssa'} 
+                    style={{fontSize: '1em'}} 
+                    ticking={true} /> 
+              </div> */}
 
               </div>
             </div>

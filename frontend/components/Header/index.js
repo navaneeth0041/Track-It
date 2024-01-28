@@ -1,9 +1,3 @@
-import { HiMenuAlt1 } from 'react-icons/hi';
-import { BsPerson } from 'react-icons/bs';
-import { BsWallet2 } from 'react-icons/bs';
-import { CiHeadphones } from 'react-icons/ci';
-import { BsBook } from 'react-icons/bs';
-import { IoMdNotificationsOutline } from 'react-icons/io';
 import { SiHiveBlockchain } from "react-icons/si";
 
 const index = () => {
@@ -20,24 +14,8 @@ const index = () => {
         </div>
         <div className="flex gap-x-2 ">
           <div className="px-6 text-sm bg-blue-200 rounded-full text-black flex items-center justify-center">
-            <p>Amfoss</p>
+            <p>amFOSS</p>
           </div>
-
-          {/* <div className="bg-gradient-to-t from-blue-500 to to-blue-50 rounded-full p-3 text-xl text-white">
-            <BsPerson />
-          </div>
-          <div className="bg-gradient-to-t from-blue-500 to to-blue-50 rounded-full p-3 text-xl text-white">
-            <BsWallet2 />
-          </div>
-          <div className="bg-gradient-to-t from-purple-500 to to-purple-50 rounded-full p-3 text-xl text-white">
-            <CiHeadphones />
-          </div>
-          <div className="bg-gradient-to-t from-purple-500 to to-purple-50 rounded-full p-3 text-xl text-white">
-            <BsBook />
-          </div>
-          <div className="bg-gradient-to-t from-red-500 to to-red-50 rounded-full p-3 text-xl text-white">
-            <IoMdNotificationsOutline />
-          </div> */}
         </div>
       </div>
     </div>
