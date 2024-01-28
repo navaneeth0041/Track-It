@@ -66,7 +66,7 @@
                   placeholder="Search items..."
                   value={searchText}
                   onChange={(e) => setSearchText(e.target.value)}
-                  className="w-[500px] p-2 mb-3 bg-blue-100 border border-gray-300 p-2 focus:outline-none rounded-md mb-3"
+                  className="w-[500px] p-2 mb-3 bg-blue-100 border border-gray-300 focus:outline-none rounded-md"
                 />
                   <Details itemData={filteredItems}/>
                 </div>

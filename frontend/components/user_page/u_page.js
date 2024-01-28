@@ -1,5 +1,6 @@
-import { RiAddFill } from "react-icons/ri";
-import Form from '../add_to_inv/form_page';
+import Users from '../user_page/user_screen';
+import { FaUserGroup } from "react-icons/fa6";
+
 
 const index = () => {
   const getCurrentDate = () => {
@@ -18,10 +19,10 @@ const index = () => {
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
                 <div>
-                <RiAddFill />
+                <FaUserGroup/>
                 </div>
                 <div>
-                  <p>Add Product</p>
+                  <p>Users</p>
                 </div>
               </div>
               <div className="flex items-center gap-x-5">
@@ -36,7 +37,7 @@ const index = () => {
           <div className="w-full pl-3 flex justify-center">
             <div className="grid grid-cols-12">
               <div className="col-span-12 pr-3 h-[80%]" >
-                <Form/>
+                <Users/>
               </div>
             </div>
           </div>
