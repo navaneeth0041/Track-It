@@ -116,7 +116,7 @@ const form = () => {
 
 
           <div className="bg-blue-100 w-64 h-[48px] p-2 mt-3 flex items-center mr-5 rounded-lg cursor-pointer font-bold justify-between">
-            {/* <div className="mr-2 text-gray-400">{selectedCategory}</div> */}
+            {/* <div className="mr-2 text-gray-400">{selectedCategory}</div>   */}
             <select
               value={selectedUnit}
               onChange={handleUnitChange}
