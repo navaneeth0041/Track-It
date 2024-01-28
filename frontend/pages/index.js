@@ -11,9 +11,9 @@ const index = () => {
             <div>
               <SideBar />
             </div>
-            <div className="col-span-10 ">
-              <Dash/>
-            </div>
+              <div className="col-span-10 ">
+                <Dash/>
+              </div>
           </div>
         </div>
       </div>

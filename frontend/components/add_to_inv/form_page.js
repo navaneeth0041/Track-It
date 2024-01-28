@@ -70,7 +70,6 @@ const form = () => {
             setSelectedCategory("Others..")
             setSelectedUnit("piece")
           window.location.reload();
-          NotificationManager.success('Success message', 'Title here');
         })
         .catch((error) => {
          console.error('Error:', error);

@@ -59,15 +59,6 @@ const screen = () => {
                   {' '}
                   <p>{getCurrentDate()}</p>
                 </div>
-              <div> 
-              <view>
-                  <time><Clock 
-                  format={'h:mm:ss a'} 
-                  style={{fontSize: '1em'}} 
-                  ticking={true} /> </time>
-                  </view>
-              </div>
-
               </div>
             </div>
           </div>
