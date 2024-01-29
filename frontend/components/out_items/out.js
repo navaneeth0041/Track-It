@@ -1,7 +1,7 @@
-import { BsCalendar2Date } from 'react-icons/bs';
 import Out_Detail from "../out_items/out_stock_details";
-import { VscFoldDown } from "react-icons/vsc";
 import { useState, useEffect } from 'react';
+import { LuPackageX } from "react-icons/lu";
+
 
 const out_pages = () => {
   const [itemData , setItemData] = useState([])
@@ -43,7 +43,7 @@ const out_pages = () => {
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
                 <div className='text-red-800'>
-                <VscFoldDown />
+                <LuPackageX />
                 </div>
                 <div className='text-red-800'>
                   <p>Out Stocks</p>

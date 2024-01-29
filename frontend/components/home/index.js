@@ -1,10 +1,7 @@
-import { BiHomeAlt, BiKey } from 'react-icons/bi';
+
 import { BsCalendar2Date } from 'react-icons/bs';
 import URL from '../url/index';
-import Consumption from '../consumption/index';
 import Category from '../category/index';
-import Carousel from '../carousel/index';
-import Tickets from '../tickets/index';
 import { MdInventory } from "react-icons/md";
 
 const index = () => {

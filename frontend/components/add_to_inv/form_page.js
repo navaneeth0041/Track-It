@@ -115,8 +115,8 @@ const form = () => {
           </div>
 
 
-          <div className="bg-blue-100 w-64 h-[48px] p-2 mt-3 flex items-center mr-5 rounded-lg cursor-pointer font-bold justify-between">
-            {/* <div className="mr-2 text-gray-400">{selectedCategory}</div>   */}
+          {/* <div className="bg-blue-100 w-64 h-[48px] p-2 mt-3 flex items-center mr-5 rounded-lg cursor-pointer font-bold justify-between">
+            <div className="mr-2 text-gray-400">{selectedCategory}</div>  
             <select
               value={selectedUnit}
               onChange={handleUnitChange}
@@ -128,7 +128,7 @@ const form = () => {
                 </option>
               ))}
             </select>
-          </div>
+          </div> */}
           <div className="bg-blue-100 w-64 p-2 mt-3 h-[48px] flex items-center mr-5 rounded-lg cursor-pointer font-bold justify-between">
             {/* <div className="mr-2 text-gray-400">{selectedCategory}</div> */}
             <select
@@ -148,7 +148,7 @@ const form = () => {
             <input
               type="Value"
               name="Unit Price"
-              placeholder="Unit Price"
+              placeholder="Unit Price (optional)"
               onChange={(e) => setPrice(e.target.value)}
               className="bg-blue-100 outline-none text-sm flex-1 "
             ></input>

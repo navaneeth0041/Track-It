@@ -1,5 +1,4 @@
 
-import { FaUpload,FaDownload } from "react-icons/fa";
 const low_details= ({itemData})=>{
 
     return(
