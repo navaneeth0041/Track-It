@@ -22,7 +22,7 @@ const index = () => {
                 <HiOutlineClipboardDocumentList />
                 </div>
                 <div>
-                  <p>Add Product</p>
+                  <p>Add Product (Admin Only)</p>
                 </div>
               </div>
               <div className="flex items-center gap-x-5">

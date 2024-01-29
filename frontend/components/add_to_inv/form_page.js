@@ -29,7 +29,7 @@ const form = () => {
   const [productName , setProductName] = useState("");
   const [productId , setProductId] = useState("");
   const [quantity , setQuantity] = useState("");
-  const [price , setPrice] = useState("");
+  const [price , setPrice] = useState(0);
 
 
 
@@ -40,7 +40,7 @@ const form = () => {
     setSelectedUnit(e.target.value);
   };
   const handleSubmit = () => {
-    if(productName == "" || productId == "" || quantity =="" || price == ""){
+    if(productName == "" || productId == "" || quantity ==""){
       console.log("error")
       
     }else {
