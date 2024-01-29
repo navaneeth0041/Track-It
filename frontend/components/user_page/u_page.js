@@ -1,5 +1,6 @@
 import Users from '../user_page/user_screen';
-import { FaUserGroup } from "react-icons/fa6";
+import { PiUsersThreeBold } from "react-icons/pi";
+
 
 
 const index = () => {
@@ -19,7 +20,7 @@ const index = () => {
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
                 <div>
-                <FaUserGroup/>
+                <PiUsersThreeBold/>
                 </div>
                 <div>
                   <p>Users</p>

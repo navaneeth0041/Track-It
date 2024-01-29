@@ -1,7 +1,8 @@
-import { BsCalendar2Date } from 'react-icons/bs';
-import { MdInventory } from "react-icons/md";
+
 import Details from "../details/inv_details";
 import React, { useState, useEffect } from 'react';
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+
 
 const inventory_pages = () => {
   const [itemData , setItemData] = useState([])
@@ -43,7 +44,7 @@ const inventory_pages = () => {
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
                 <div>
-                <MdInventory />
+                <HiOutlineClipboardDocumentList />
                 </div>
                 <div>
                   <p>Inventory</p>

@@ -1,5 +1,6 @@
-import { RiAddFill } from "react-icons/ri";
 import Form from '../add_to_inv/form_page';
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+
 
 const index = () => {
   const getCurrentDate = () => {
@@ -18,7 +19,7 @@ const index = () => {
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
                 <div>
-                <RiAddFill />
+                <HiOutlineClipboardDocumentList />
                 </div>
                 <div>
                   <p>Add Product</p>

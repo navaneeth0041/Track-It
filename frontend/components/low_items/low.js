@@ -1,7 +1,7 @@
-import { BsCalendar2Date } from 'react-icons/bs';
 import Low_Detail from "../low_items/low_stock_details";
-import { VscFoldDown } from "react-icons/vsc";
 import  React , { useState, useEffect } from 'react';
+import { IoTrendingDownOutline } from "react-icons/io5";
+
 
 
 
@@ -45,7 +45,7 @@ const inventory_pages = () => {
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
                 <div className='text-orange-500'>
-                <VscFoldDown />
+                <IoTrendingDownOutline/>
                 </div>
                 <div className='text-orange-500'>
                   <p>Low Stocks</p>

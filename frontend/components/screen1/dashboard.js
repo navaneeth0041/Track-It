@@ -1,7 +1,7 @@
 import Cost from '../dash_cards/cost_card';
 import Consumption from '../consumption/index';
 import { useState, useEffect } from 'react';
-import Clock from 'react-live-clock';
+import { GrHomeRounded } from "react-icons/gr";
 
 import { AiOutlineDashboard } from "react-icons/ai";
 const screen = () => {
@@ -48,7 +48,7 @@ const screen = () => {
             <div className="w-full bg-white flex justify-between items-center px-5 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-x-5">
                 <div>
-                  <AiOutlineDashboard />
+                  <GrHomeRounded />
                 </div>
                 <div>
                   <p>DashBoard</p>
